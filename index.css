@@ -1,14 +1,14 @@
 :root {
-    --bg: #fffaf6;
+    --bg: #ffffff;
     --panel: #ffffff;
-    --panel-soft: #f5efe9;
-    --primary: #6d3f2d;
-    --primary-dark: #4d2a1d;
-    --accent: #d7b089;
-    --text: #221813;
-    --muted: #6a5d57;
-    --line: rgba(65, 38, 28, 0.12);
-    --shadow: 0 18px 45px rgba(63, 35, 25, 0.12);
+    --panel-soft: #f0f2f5;
+    --primary: #0084ff;
+    --primary-dark: #0073e6;
+    --accent: #31a24c;
+    --text: #050505;
+    --muted: #65676b;
+    --line: #e5e5ea;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -53,7 +53,7 @@ select {
 }
 
 .light-section {
-    background: linear-gradient(180deg, rgba(245, 239, 233, 0.9), rgba(255, 255, 255, 0.8));
+    background: linear-gradient(180deg, rgba(240, 242, 245, 0.5), rgba(255, 255, 255, 0.8));
 }
 
 .eyebrow {
@@ -109,10 +109,10 @@ p {
 }
 
 .primary-btn {
-    background: linear-gradient(135deg, var(--primary), #8a5a49);
+    background: linear-gradient(135deg, #0084ff, #0073e6);
     color: #fff;
     padding: 16px 28px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 2px 8px rgba(0, 132, 255, 0.3);
 }
 
 .secondary-btn {
@@ -150,9 +150,9 @@ p {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(255, 250, 246, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(72, 45, 32, 0.08);
+    border-bottom: 1px solid #e5e5ea;
 }
 
 .nav-wrap {
@@ -178,9 +178,9 @@ p {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background: linear-gradient(135deg, var(--primary), #ad7d5d);
+    background: linear-gradient(135deg, #0084ff, #0073e6);
     color: #fff;
-    box-shadow: 0 10px 20px rgba(109, 63, 45, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 132, 255, 0.3);
 }
 
 .main-nav {
@@ -280,7 +280,7 @@ p {
 }
 
 .book-cover {
-    background: linear-gradient(150deg, #3c2a26, #6d3f2d 48%, #a36c4d 100%);
+    background: linear-gradient(150deg, #0073e6, #0084ff 48%, #1fa5ff 100%);
     color: #fff;
     border-radius: 24px 24px 18px 18px;
     padding: 26px 22px 20px;
@@ -347,7 +347,7 @@ p {
 }
 
 .stats-band {
-    background: #201511;
+    background: #2a2a2a;
     color: #fff;
     padding: 28px 0;
 }
@@ -455,8 +455,8 @@ p {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background: rgba(109, 63, 45, 0.1);
-    color: var(--primary);
+    background: rgba(0, 132, 255, 0.1);
+    color: #0084ff;
     font-weight: 800;
     margin-bottom: 16px;
 }
@@ -480,9 +480,9 @@ p {
 }
 
 .occasion-card.active {
-    background: linear-gradient(135deg, rgba(109, 63, 45, 0.08), rgba(215, 176, 137, 0.14));
-    border-color: rgba(109, 63, 45, 0.35);
-    color: var(--primary);
+    background: linear-gradient(135deg, rgba(0, 132, 255, 0.08), rgba(0, 132, 255, 0.14));
+    border-color: rgba(0, 132, 255, 0.35);
+    color: #0084ff;
 }
 
 .builder-layout {
@@ -546,17 +546,17 @@ select {
 
 .chip.active,
 .format.active {
-    background: rgba(109, 63, 45, 0.1);
-    border-color: rgba(109, 63, 45, 0.3);
-    color: var(--primary);
+    background: rgba(0, 132, 255, 0.1);
+    border-color: rgba(0, 132, 255, 0.3);
+    color: #0084ff;
 }
 
 .builder-note {
     padding: 14px 16px;
     border-radius: 14px;
-    background: rgba(109, 63, 45, 0.05);
-    color: var(--muted);
-    border: 1px solid rgba(109, 63, 45, 0.08);
+    background: rgba(0, 132, 255, 0.05);
+    color: #65676b;
+    border: 1px solid rgba(0, 132, 255, 0.08);
 }
 
 .preview-window {
@@ -573,8 +573,8 @@ select {
 }
 
 .badge {
-    background: rgba(121, 194, 119, 0.12);
-    color: #2d7d44;
+    background: rgba(49, 162, 76, 0.12);
+    color: #1f6f4e;
     border-radius: 999px;
     padding: 6px 10px;
     font-size: 0.76rem;
@@ -582,16 +582,16 @@ select {
 }
 
 .mini-book {
-    background: rgba(240, 228, 218, 0.9);
+    background: rgba(240, 242, 245, 0.9);
     border-radius: 22px;
-    border: 1px solid var(--line);
+    border: 1px solid #e5e5ea;
     overflow: hidden;
 }
 
 .mini-cover {
     min-height: 200px;
     padding: 28px 22px;
-    background: linear-gradient(135deg, #55372d, #9a6d52);
+    background: linear-gradient(135deg, #0073e6, #1fa5ff);
     color: #fff;
 }
 
@@ -617,15 +617,15 @@ select {
 }
 
 .price-row {
-    background: rgba(109, 63, 45, 0.06);
+    background: rgba(0, 132, 255, 0.06);
     border-radius: 14px;
     padding: 14px 16px;
     font-weight: 700;
-    color: var(--muted);
+    color: #65676b;
 }
 
 .price-row strong {
-    color: var(--primary);
+    color: #0084ff;
     font-size: 1.2rem;
 }
 
@@ -642,8 +642,8 @@ select {
 }
 
 .pricing-card.featured {
-    border-color: rgba(109, 63, 45, 0.25);
-    background: linear-gradient(180deg, rgba(109, 63, 45, 0.07), rgba(255, 255, 255, 0.96));
+    border-color: rgba(0, 132, 255, 0.25);
+    background: linear-gradient(180deg, rgba(0, 132, 255, 0.07), rgba(255, 255, 255, 0.96));
     transform: translateY(-6px);
 }
 
@@ -772,7 +772,7 @@ select {
 }
 
 .site-footer {
-    background: #201511;
+    background: #2a2a2a;
     color: rgba(255, 255, 255, 0.8);
     padding: 68px 0 20px;
 }
@@ -834,7 +834,7 @@ select {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
-    background: rgba(109, 63, 45, 0.05);
+    background: rgba(0, 132, 255, 0.05);
     padding: 8px;
     border-radius: 14px;
     margin-bottom: 18px;
@@ -844,7 +844,7 @@ select {
     border: 0;
     padding: 12px 16px;
     background: transparent;
-    color: var(--muted);
+    color: #65676b;
     border-radius: 10px;
     font-weight: 700;
     cursor: pointer;
@@ -852,8 +852,8 @@ select {
 
 .auth-tab.active {
     background: #fff;
-    color: var(--primary);
-    box-shadow: 0 8px 18px rgba(36, 22, 17, 0.05);
+    color: #0084ff;
+    box-shadow: 0 8px 18px rgba(0, 132, 255, 0.08);
 }
 
 .auth-form {
@@ -907,9 +907,9 @@ select {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary), #8a5a49);
+    background: linear-gradient(135deg, #0084ff, #0073e6);
     color: #fff;
-    box-shadow: var(--shadow);
+    box-shadow: 0 2px 8px rgba(0, 132, 255, 0.3);
 }
 
 .btn-secondary {
@@ -979,7 +979,7 @@ select {
     display: block;
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(135deg, var(--primary), #d7b089);
+    background: linear-gradient(135deg, #0084ff, #1fa5ff);
     width: 25%;
 }
 
@@ -1027,9 +1027,9 @@ select {
 }
 
 .choice-card:has(input:checked) {
-    background: rgba(109, 63, 45, 0.08);
-    border-color: rgba(109, 63, 45, 0.35);
-    color: var(--primary);
+    background: rgba(0, 132, 255, 0.08);
+    border-color: rgba(0, 132, 255, 0.35);
+    color: #0084ff;
 }
 
 input[type="text"],
@@ -1055,9 +1055,9 @@ textarea {
     display: grid;
     place-items: center;
     min-height: 170px;
-    border: 1px dashed rgba(109, 63, 45, 0.35);
+    border: 1px dashed rgba(0, 132, 255, 0.35);
     border-radius: 20px;
-    background: rgba(109, 63, 45, 0.03);
+    background: rgba(0, 132, 255, 0.03);
     padding: 18px;
     text-align: center;
 }
@@ -1070,11 +1070,11 @@ textarea {
     display: grid;
     gap: 10px;
     cursor: pointer;
-    color: var(--muted);
+    color: #65676b;
 }
 
 .upload-box strong {
-    color: var(--primary);
+    color: #0084ff;
     font-size: 1.2rem;
 }
 
@@ -1167,7 +1167,7 @@ textarea {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 1px solid rgba(127, 61, 43, 0.1);
+    border: 1px solid rgba(0, 132, 255, 0.1);
     background: #fff;
     border-radius: 14px;
     padding: 0.9rem 1rem;
@@ -1202,8 +1202,8 @@ textarea {
     margin: 12px 0 16px;
     padding: 0.5rem 0.8rem;
     border-radius: 999px;
-    background: rgba(127, 61, 43, 0.08);
-    color: var(--primary-dark);
+    background: rgba(0, 132, 255, 0.08);
+    color: #0073e6;
     font-weight: 700;
 }
 
@@ -1232,7 +1232,7 @@ textarea {
 }
 
 .sidebar {
-    background: #201a1a;
+    background: #2a2a2a;
     color: rgba(255, 255, 255, 0.9);
     border-radius: 26px;
     padding: 26px 18px;
@@ -1337,7 +1337,7 @@ textarea {
 }
 
 .book-preview-box {
-    background: linear-gradient(180deg, #f9efe8, #f5ddd0);
+    background: linear-gradient(180deg, #f0f2f5, #e8ecf1);
     border-radius: 18px;
     padding: 18px;
     margin: 18px 0;
@@ -1367,7 +1367,7 @@ textarea {
     display: block;
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(135deg, var(--primary), #d29a7d);
+    background: linear-gradient(135deg, #0084ff, #1fa5ff);
 }
 
 @media (max-width: 980px) {

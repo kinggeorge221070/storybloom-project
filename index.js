@@ -165,22 +165,22 @@ function setCurrentUser(user) {
 
 function logoutUser() {
     localStorage.removeItem(ACTIVE_USER_KEY);
-    window.location.href = 'kp.html';
+    window.location.href = 'index.html';
 }
 
 function redirectToAuth() {
-    const page = window.location.pathname.split('/').pop() || 'kp.html';
-    const redirectTarget = page === 'auth.html' ? 'kp.html' : page;
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    const redirectTarget = page === 'auth.html' ? 'index.html' : page;
     const search = new URLSearchParams({ redirect: redirectTarget }).toString();
     window.location.href = `auth.html?${search}`;
 }
 
 function enforceAuth() {
-    const page = window.location.pathname.split('/').pop() || 'kp.html';
+    const page = window.location.pathname.split('/').pop() || 'index.html';
 
     if (page === 'auth.html') {
         if (getCurrentUser()) {
-            const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'kp.html';
+            const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
             window.location.href = redirectTarget;
         }
         return;
@@ -251,7 +251,7 @@ function initializeAuthForms() {
                 }
 
                 setCurrentUser({ name: user.name, email: user.email });
-                const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'kp.html';
+                const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
                 window.location.href = redirectTarget;
             } catch (error) {
                 if (message) {
@@ -298,7 +298,7 @@ function initializeAuthForms() {
 
                 await addDatabaseRecord('users', account);
                 setCurrentUser({ name, email: account.email });
-                const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'kp.html';
+                const redirectTarget = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
                 window.location.href = redirectTarget;
             } catch (error) {
                 if (message) {
