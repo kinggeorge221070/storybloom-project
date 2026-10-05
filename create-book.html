@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Your Book | StoryBloom Ghana</title>
+    <meta name="description" content="Create a personalised book with guided questions, photos, and AI-assisted editing." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="kp.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container nav">
+            <a class="brand" href="kp.html" aria-label="StoryBloom home">
+                <span class="brand-mark">S</span>
+                <div>
+                    <strong>StoryBloom</strong>
+                    <small>Ghana</small>
+                </div>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="kp.html">Home</a>
+                <a href="create-book.html" class="active">Create Book</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+            <a class="btn btn-primary" href="checkout.html">Checkout</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow">Book Builder</span>
+                <h1 class="page-title">Create a personalized storybook</h1>
+                <p class="page-subtitle">Answer a few quick prompts, upload your memories, and preview your keepsake.</p>
+            </div>
+        </section>
+
+        <section class="section-space">
+            <div class="container form-shell">
+                <div class="builder-panel">
+                    <div class="progress-wrap">
+                        <div class="progress-head">
+                            <span>Step <strong id="step-indicator">1</strong> of 4</span>
+                            <span id="progress-label">Recipient</span>
+                        </div>
+                        <div class="progress-bar"><span id="progress-fill"></span></div>
+                    </div>
+
+                    <form id="book-form" novalidate>
+                        <div class="form-step active" data-step="1">
+                            <h3>Who is this book for?</h3>
+                            <div class="choice-grid two-col">
+                                <label class="choice-card">
+                    <input type="radio" name="recipient" value="Partner" checked />
+                    <span>Partner</span>
+                  </label>
+                                <label class="choice-card">
+                    <input type="radio" name="recipient" value="Friend" />
+                    <span>Friend</span>
+                  </label>
+                                <label class="choice-card">
+                    <input type="radio" name="recipient" value="Mum" />
+                    <span>Mum</span>
+                  </label>
+                                <label class="choice-card">
+                    <input type="radio" name="recipient" value="Dad" />
+                    <span>Dad</span>
+                  </label>
+                                <label class="choice-card">
+                    <input type="radio" name="recipient" value="Child" />
+                    <span>Child</span>
+                  </label>
+                                <label class="choice-card">
+                    <input type="radio" name="recipient" value="Colleague" />
+                    <span>Colleague</span>
+                  </label>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="occasion">Occasion</label>
+                                <select id="occasion" name="occasion">
+                    <option>Birthday</option>
+                    <option selected>Anniversary</option>
+                    <option>Wedding</option>
+                    <option>Graduation</option>
+                    <option>Mother's Day</option>
+                    <option>Father's Day</option>
+                    <option>Just Because</option>
+                    <option>Other</option>
+                  </select>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="recipient-name">Recipient name</label>
+                                <input id="recipient-name" type="text" placeholder="e.g. Efua" />
+                            </div>
+                        </div>
+
+                        <div class="form-step" data-step="2">
+                            <h3>Tell us about your story</h3>
+                            <div class="field-group">
+                                <label for="relationship">How did you meet or describe your relationship?</label>
+                                <textarea id="relationship" rows="3" placeholder="We met at a campus event and became best friends..."></textarea>
+                            </div>
+                            <div class="field-group">
+                                <label for="memories">Favourite memories or milestones</label>
+                                <textarea id="memories" rows="3" placeholder="Late-night calls, trips, surprise birthday celebrations..."></textarea>
+                            </div>
+                            <div class="field-group">
+                                <label for="special">What makes them special?</label>
+                                <textarea id="special" rows="3" placeholder="They are kind, loyal, hilarious, and deeply thoughtful..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-step" data-step="3">
+                            <h3>Add your photos</h3>
+                            <div class="upload-box">
+                                <input id="photo-upload" type="file" multiple accept="image/*" />
+                                <label for="photo-upload">
+                    <strong>Upload photos</strong>
+                    <span>Choose the best moments from your collection</span>
+                  </label>
+                            </div>
+                            <ul class="file-list" id="file-list" aria-live="polite"></ul>
+                        </div>
+
+                        <div class="form-step" data-step="4">
+                            <h3>Choose your book style</h3>
+                            <div class="choice-grid four-col">
+                                <label class="choice-card">
+                    <input type="radio" name="style" value="Romantic" checked />
+                    <span>Romantic</span>
+                  </label>
+                                <label class="choice-card">
+                    <input type="radio" name="style" value="Funny" />
+                    <span>Funny</span>
+                  </label>
+                                <label class="choice-card">
+                    <input type="radio" name="style" value="Emotional" />
+                    <span>Emotional</span>
+                  </label>
+                                <label class="choice-card">
+                    <input type="radio" name="style" value="Inspirational" />
+                    <span>Inspirational</span>
+                  </label>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="book-format">Format</label>
+                                <select id="book-format" name="bookFormat">
+                    <option>Paperback</option>
+                    <option>Hardcover</option>
+                  </select>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="extras">Optional extras</label>
+                                <select id="extras" name="extras">
+                    <option>None</option>
+                    <option>Gift Box</option>
+                    <option>Personalized Bookmark</option>
+                    <option>Greeting Card + Wrapping</option>
+                  </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="prev-step">Back</button>
+                            <button type="button" class="btn btn-primary" id="next-step">Next</button>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="summary-panel">
+                    <h3>Your Book Overview</h3>
+                    <div class="summary-card">
+                        <span class="label">Recipient</span>
+                        <strong id="summary-recipient">Partner</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span class="label">Occasion</span>
+                        <strong id="summary-occasion">Anniversary</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span class="label">Style</span>
+                        <strong id="summary-style">Romantic</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span class="label">Format</span>
+                        <strong id="summary-format">Paperback</strong>
+                    </div>
+
+                    <div class="price-box">
+                        <div>
+                            <span>Estimated starting price</span>
+                            <strong>GH₵ 200</strong>
+                        </div>
+                        <a href="checkout.html" class="btn btn-primary full">Continue to checkout</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="kp.html" aria-label="StoryBloom home">
+                    <span class="brand-mark">S</span>
+                    <div>
+                        <strong>StoryBloom</strong>
+                        <small>Ghana</small>
+                    </div>
+                </a>
+                <p>Beautiful books made from memories, milestones, and love.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="kp.html">Home</a></li>
+                    <li><a href="create-book.html">Create Book</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:hello@storybloomgh.com">hello@storybloomgh.com</a></li>
+                    <li><a href="tel:+233200000000">+233 20 000 0000</a></li>
+                    <li>Accra, Ghana</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright"><span>© 2026 StoryBloom Ghana</span></div>
+    </footer>
+
+    <script src="kp.js"></script>
+</body>
+
+</html>

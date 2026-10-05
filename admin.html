@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | StoryBloom Ghana</title>
+    <meta name="description" content="Business dashboard for order management, production status, and AI review workflows." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="kp.css" />
+</head>
+
+<body>
+    <div class="container admin-shell section-space">
+        <aside class="sidebar">
+            <a class="brand" href="kp.html" aria-label="StoryBloom home">
+                <span class="brand-mark">S</span>
+                <div>
+                    <strong>StoryBloom</strong>
+                    <small>Admin</small>
+                </div>
+            </a>
+
+            <nav class="sidebar-nav" aria-label="Admin navigation">
+                <a href="#" class="active">Overview</a>
+                <a href="#">Orders</a>
+                <a href="#">Customers</a>
+                <a href="#">Products</a>
+                <a href="#">Print Queue</a>
+                <a href="#">Analytics</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <section class="panel stat-card">
+                <div class="section-heading left" style="margin-bottom: 18px;">
+                    <span class="eyebrow">Overview</span>
+                    <h2>Business dashboard</h2>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="panel stat-card">
+                        <strong>124</strong>
+                        <span>Orders this month</span>
+                    </div>
+                    <div class="panel stat-card">
+                        <strong>GH₵ 42.8k</strong>
+                        <span>Revenue</span>
+                    </div>
+                    <div class="panel stat-card">
+                        <strong>18</strong>
+                        <span>Awaiting review</span>
+                    </div>
+                    <div class="panel stat-card">
+                        <strong>9</strong>
+                        <span>Ready for delivery</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-grid">
+                <div class="panel">
+                    <div class="section-heading left" style="margin-bottom: 18px;">
+                        <span class="eyebrow">Orders</span>
+                        <h3>Recent orders</h3>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Customer</th>
+                                    <th>Status</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#STB-40218</td>
+                                    <td>Ama Mensah</td>
+                                    <td><span class="status-pill status-review">Review</span></td>
+                                    <td>GH₵ 850</td>
+                                </tr>
+                                <tr>
+                                    <td>#STB-40196</td>
+                                    <td>Kwaku Amo</td>
+                                    <td><span class="status-pill status-live">Approved</span></td>
+                                    <td>GH₵ 1,080</td>
+                                </tr>
+                                <tr>
+                                    <td>#STB-40145</td>
+                                    <td>Efua Owusu</td>
+                                    <td><span class="status-pill status-printing">Printing</span></td>
+                                    <td>GH₵ 950</td>
+                                </tr>
+                                <tr>
+                                    <td>#STB-40095</td>
+                                    <td>Michael Osei</td>
+                                    <td><span class="status-pill status-live">Delivered</span></td>
+                                    <td>GH₵ 720</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel ai-panel">
+                    <div class="section-heading left" style="margin-bottom: 18px;">
+                        <span class="eyebrow">AI review</span>
+                        <h3>Current Draft</h3>
+                    </div>
+
+                    <div class="book-preview-box">
+                        <strong>Our Love Story</strong>
+                        <p>“A heartfelt story of resilience, laughter, and love... with key memories from Accra to our years together.”</p>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="approval-action">Approval action</label>
+                        <select id="approval-action">
+                <option>Approve for print</option>
+                <option>Request revisions</option>
+                <option>Regenerate section</option>
+              </select>
+                    </div>
+                    <a href="#" class="btn btn-primary full">Submit action</a>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="section-heading left" style="margin-bottom: 18px;">
+                    <span class="eyebrow">Performance</span>
+                    <h3>Monthly sales</h3>
+                </div>
+
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <span>Jan</span>
+                        <div class="bar-track"><span style="width: 42%;"></span></div>
+                        <strong>42%</strong>
+                    </div>
+                    <div class="bar-item">
+                        <span>Feb</span>
+                        <div class="bar-track"><span style="width: 58%;"></span></div>
+                        <strong>58%</strong>
+                    </div>
+                    <div class="bar-item">
+                        <span>Mar</span>
+                        <div class="bar-track"><span style="width: 72%;"></span></div>
+                        <strong>72%</strong>
+                    </div>
+                    <div class="bar-item">
+                        <span>Apr</span>
+                        <div class="bar-track"><span style="width: 88%;"></span></div>
+                        <strong>88%</strong>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="kp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | StoryBloom Ghana</title>
+    <meta name="description" content="Complete your order, choose delivery details, and pay securely." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="kp.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container nav">
+            <a class="brand" href="kp.html" aria-label="StoryBloom home">
+                <span class="brand-mark">S</span>
+                <div>
+                    <strong>StoryBloom</strong>
+                    <small>Ghana</small>
+                </div>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="kp.html">Home</a>
+                <a href="create-book.html">Create Book</a>
+                <a href="checkout.html" class="active">Checkout</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+            <a class="btn btn-primary" href="create-book.html">Back to Builder</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow">Complete order</span>
+                <h1 class="page-title">Checkout</h1>
+                <p class="page-subtitle">Review your details, add delivery information, and complete payment.</p>
+            </div>
+        </section>
+
+        <section class="section-space">
+            <div class="container checkout-grid">
+                <div class="panel checkout-box">
+                    <h3>Customer Information</h3>
+                    <div class="field-group">
+                        <label for="full-name">Full name</label>
+                        <input id="full-name" type="text" value="Ama Mensah" />
+                    </div>
+                    <div class="field-group">
+                        <label for="email">Email address</label>
+                        <input id="email" type="email" value="ama@example.com" />
+                    </div>
+                    <div class="field-group">
+                        <label for="phone">Phone / WhatsApp</label>
+                        <input id="phone" type="tel" value="+233 20 123 4567" />
+                    </div>
+
+                    <h3>Delivery Information</h3>
+                    <div class="field-group">
+                        <label for="address">Delivery address</label>
+                        <input id="address" type="text" value="24 Adzewa Road, East Legon" />
+                    </div>
+                    <div class="field-group">
+                        <label for="city">City / Town</label>
+                        <input id="city" type="text" value="Accra" />
+                    </div>
+                    <div class="field-group">
+                        <label for="region">Region</label>
+                        <input id="region" type="text" value="Greater Accra" />
+                    </div>
+                    <div class="field-group">
+                        <label for="delivery-notes">Delivery instructions</label>
+                        <textarea id="delivery-notes" rows="3">Ask for the security guard at the gate.</textarea>
+                    </div>
+
+                    <h3>Payment Method</h3>
+                    <div class="card-stack">
+                        <label class="method-box">
+                <input type="radio" name="payment" checked />
+                <span>Mobile Money</span>
+              </label>
+                        <label class="method-box">
+                <input type="radio" name="payment" />
+                <span>Debit / Credit Card</span>
+              </label>
+                    </div>
+                </div>
+
+                <aside class="panel order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="order-row"><span>Title</span><strong>Our Love Story</strong></div>
+                    <div class="order-row"><span>Format</span><strong>Hardcover</strong></div>
+                    <div class="order-row"><span>Extras</span><strong>Gift Box</strong></div>
+                    <div class="order-row"><span>Subtotal</span><strong>GH₵ 200</strong></div>
+                    <div class="order-row"><span>Delivery</span><strong>GH₵ 0</strong></div>
+                    <div class="order-row"><span>Discount</span><strong>GH₵ 0</strong></div>
+                    <div class="total-row"><span>Total</span><span>GH₵ 200</span></div>
+
+                    <div class="field-group" style="margin-top: 18px;">
+                        <label for="promo-code">Promo code</label>
+                        <input id="promo-code" type="text" placeholder="Enter code" />
+                    </div>
+
+                    <label class="method-box" style="margin-top: 18px;">
+              <input type="checkbox" checked />
+              <span>I agree to the terms and privacy policy</span>
+            </label>
+
+                    <a id="pay-now-button" href="confirmation.html" class="btn btn-primary full" style="margin-top: 20px;">Pay Now</a>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="kp.html" aria-label="StoryBloom home">
+                    <span class="brand-mark">S</span>
+                    <div>
+                        <strong>StoryBloom</strong>
+                        <small>Ghana</small>
+                    </div>
+                </a>
+                <p>Beautiful books made from memories, milestones, and love.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="kp.html">Home</a></li>
+                    <li><a href="create-book.html">Create Book</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:hello@storybloomgh.com">hello@storybloomgh.com</a></li>
+                    <li><a href="tel:+233200000000">+233 20 000 0000</a></li>
+                    <li>Accra, Ghana</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright"><span>© 2026 StoryBloom Ghana</span></div>
+    </footer>
+
+    <script src="kp.js"></script>
+</body>
+
+</html>
