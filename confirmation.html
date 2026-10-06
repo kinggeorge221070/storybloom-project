@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order Confirmation | StoryBloom Ghana</title>
-    <meta name="description" content="Your personalized StoryBloom order has been confirmed." />
+    <title>Online Payments Unavailable | StoryBloom Ghana</title>
+    <meta name="description" content="StoryBloom online checkout is not available yet. Contact us to arrange your order." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="sb.css" />
 </head>
 
 <body>
@@ -28,7 +28,10 @@
                 <a href="checkout.html">Checkout</a>
                 <a href="admin.html">Admin</a>
             </nav>
-            <a class="btn btn-primary" href="index.html">Continue shopping</a>
+            <div class="header-actions">
+                <a class="link-btn" href="auth.html" data-auth-link>Sign in</a>
+                <a class="btn btn-primary" href="index.html">Continue shopping</a>
+            </div>
         </div>
     </header>
 
@@ -37,22 +40,13 @@
             <div class="container">
                 <div class="panel confirmation-card">
                     <div class="confirmation-badge">✓</div>
-                    <span class="eyebrow">Payment successful</span>
-                    <h1 class="page-title" style="margin-bottom: 0;">Your order is confirmed</h1>
-                    <div class="order-number">Order #STB-40218</div>
-                    <p>Your personalized book has been submitted for our review and production workflow. We’ll email you soon with a secure order link and status updates.</p>
-
-                    <ul class="summary-list">
-                        <li><span>Book</span><span>Our Love Story</span></li>
-                        <li><span>Format</span><span>Hardcover</span></li>
-                        <li><span>Amount paid</span><span>GH₵ 200</span></li>
-                        <li><span>Delivery</span><span>Accra, Greater Accra</span></li>
-                        <li><span>Status</span><span>Order Received</span></li>
-                    </ul>
+                    <span class="eyebrow">Checkout not active</span>
+                    <h1 class="page-title" style="margin-bottom: 0;">Online payment is not available yet</h1>
+                    <p>Checkout is not connected yet. No payment has been taken and no order has been placed. Contact us to arrange your order.</p>
 
                     <div class="hero-actions" style="justify-content: center; margin-top: 24px;">
-                        <a class="btn btn-primary" href="admin.html">View Order</a>
-                        <a class="btn btn-secondary" href="index.html">Return Home</a>
+                        <a class="btn btn-primary" href="create-book.html">Return to your book</a>
+                        <a class="btn btn-secondary" href="mailto:hello@storybloomgh.com">Contact StoryBloom</a>
                     </div>
                 </div>
             </div>
@@ -99,7 +93,7 @@
         <div class="container copyright"><span>© 2026 StoryBloom Ghana</span></div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="sb.js"></script>
 </body>
 
 </html>

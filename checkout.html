@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="sb.css" />
 </head>
 
 <body>
@@ -28,7 +28,10 @@
                 <a href="checkout.html" class="active">Checkout</a>
                 <a href="admin.html">Admin</a>
             </nav>
-            <a class="btn btn-primary" href="create-book.html">Back to Builder</a>
+            <div class="header-actions">
+                <a class="link-btn" href="auth.html" data-auth-link>Sign in</a>
+                <a class="btn btn-primary" href="create-book.html">Back to Builder</a>
+            </div>
         </div>
     </header>
 
@@ -47,53 +50,43 @@
                     <h3>Customer Information</h3>
                     <div class="field-group">
                         <label for="full-name">Full name</label>
-                        <input id="full-name" type="text" value="Ama Mensah" />
+                        <input id="full-name" type="text" placeholder="Your full name" autocomplete="name" />
                     </div>
                     <div class="field-group">
                         <label for="email">Email address</label>
-                        <input id="email" type="email" value="ama@example.com" />
+                        <input id="email" type="email" placeholder="you@example.com" autocomplete="email" />
                     </div>
                     <div class="field-group">
                         <label for="phone">Phone / WhatsApp</label>
-                        <input id="phone" type="tel" value="+233 20 123 4567" />
+                        <input id="phone" type="tel" placeholder="+233 20 000 0000" autocomplete="tel" />
                     </div>
 
                     <h3>Delivery Information</h3>
                     <div class="field-group">
                         <label for="address">Delivery address</label>
-                        <input id="address" type="text" value="24 Adzewa Road, East Legon" />
+                        <input id="address" type="text" placeholder="Street address" autocomplete="street-address" />
                     </div>
                     <div class="field-group">
                         <label for="city">City / Town</label>
-                        <input id="city" type="text" value="Accra" />
+                        <input id="city" type="text" placeholder="City or town" autocomplete="address-level2" />
                     </div>
                     <div class="field-group">
                         <label for="region">Region</label>
-                        <input id="region" type="text" value="Greater Accra" />
+                        <input id="region" type="text" placeholder="Region" autocomplete="address-level1" />
                     </div>
                     <div class="field-group">
                         <label for="delivery-notes">Delivery instructions</label>
-                        <textarea id="delivery-notes" rows="3">Ask for the security guard at the gate.</textarea>
+                        <textarea id="delivery-notes" rows="3" placeholder="Optional delivery instructions"></textarea>
                     </div>
 
-                    <h3>Payment Method</h3>
-                    <div class="card-stack">
-                        <label class="method-box">
-                <input type="radio" name="payment" checked />
-                <span>Mobile Money</span>
-              </label>
-                        <label class="method-box">
-                <input type="radio" name="payment" />
-                <span>Debit / Credit Card</span>
-              </label>
-                    </div>
+                    <p>Online payment is not enabled yet. Contact us to arrange payment before we begin production.</p>
                 </div>
 
                 <aside class="panel order-summary">
                     <h3>Order Summary</h3>
-                    <div class="order-row"><span>Title</span><strong>Our Love Story</strong></div>
-                    <div class="order-row"><span>Format</span><strong>Hardcover</strong></div>
-                    <div class="order-row"><span>Extras</span><strong>Gift Box</strong></div>
+                    <div class="order-row"><span>Book</span><strong id="checkout-book-title">Not selected</strong></div>
+                    <div class="order-row"><span>Format</span><strong id="checkout-book-format">—</strong></div>
+                    <div class="order-row"><span>Extras</span><strong id="checkout-book-extras">—</strong></div>
                     <div class="order-row"><span>Subtotal</span><strong>GH₵ 200</strong></div>
                     <div class="order-row"><span>Delivery</span><strong>GH₵ 0</strong></div>
                     <div class="order-row"><span>Discount</span><strong>GH₵ 0</strong></div>
@@ -109,7 +102,8 @@
               <span>I agree to the terms and privacy policy</span>
             </label>
 
-                    <a id="pay-now-button" href="confirmation.html" class="btn btn-primary full" style="margin-top: 20px;">Pay Now</a>
+                    <div id="checkout-message" class="auth-message" role="alert" hidden></div>
+                    <a id="pay-now-button" href="confirmation.html" class="btn btn-primary full" style="margin-top: 20px;">Online payments unavailable</a>
                 </aside>
             </div>
         </section>
@@ -155,7 +149,7 @@
         <div class="container copyright"><span>© 2026 StoryBloom Ghana</span></div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="sb.js"></script>
 </body>
 
 </html>

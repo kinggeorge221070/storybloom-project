@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="sb.css" />
 </head>
 
 <body>
@@ -28,7 +28,10 @@
                 <a href="checkout.html">Checkout</a>
                 <a href="admin.html">Admin</a>
             </nav>
-            <a class="btn btn-primary" href="checkout.html">Checkout</a>
+            <div class="header-actions">
+                <a class="link-btn" href="auth.html" data-auth-link>Sign in</a>
+                <a class="btn btn-primary" href="checkout.html">Checkout</a>
+            </div>
         </div>
     </header>
 
@@ -53,6 +56,7 @@
                     </div>
 
                     <form id="book-form" novalidate>
+                        <div id="book-message" class="auth-message" role="alert" hidden></div>
                         <div class="form-step active" data-step="1">
                             <h3>Who is this book for?</h3>
                             <div class="choice-grid two-col">
@@ -124,7 +128,7 @@
                                 <input id="photo-upload" type="file" multiple accept="image/*" />
                                 <label for="photo-upload">
                     <strong>Upload photos</strong>
-                    <span>Choose the best moments from your collection</span>
+                    <span>Preview selected filenames (uploads are not saved in this demo)</span>
                   </label>
                             </div>
                             <ul class="file-list" id="file-list" aria-live="polite"></ul>
@@ -248,7 +252,7 @@
         <div class="container copyright"><span>© 2026 StoryBloom Ghana</span></div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="sb.js"></script>
 </body>
 
 </html>
